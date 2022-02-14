@@ -37,6 +37,7 @@ import LinkingConfiguration from "./LinkingConfiguration";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
 import HomeScreen from "../screens/HomeScreen";
 import HomeHeader from "./HomeHeader";
+import UsersScreen from "../screens/UsersScreen";
 
 export default function Navigation({
   colorScheme,
@@ -71,6 +72,11 @@ function RootNavigator() {
         name="ChatRoom"
         component={ChatRoomScreen}
         options={{ headerTitle: ChatRoomHeader }}
+      />
+      <Stack.Screen
+        name="UsersScreen"
+        component={UsersScreen}
+        options={{ title: "Users" }}
       />
       <Stack.Screen
         name="NotFound"

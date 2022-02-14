@@ -5,6 +5,7 @@ import { Image, Pressable, Text, View } from "react-native";
 
 const HomeHeader = (props) => {
   const navigation = useNavigation();
+  console.log(props);
   return (
     <View
       style={{
@@ -40,7 +41,7 @@ const HomeHeader = (props) => {
       />
       <Pressable
         onPress={() => {
-          navigation.navigate("UsersScreen");
+          navigation.navigate('UsersScreen');
         }}
       >
         <Feather

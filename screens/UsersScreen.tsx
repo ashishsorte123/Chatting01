@@ -1,12 +1,23 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import Users from "../assets/dummy-data/Users";
+import UserItem from "../components/UserItem";
 
-const UsersScreen = () => {
+export default function UsersScreen() {
   return (
-    <View>
-      <Text>UsersScreen</Text>
+    <View style={styles.page}>
+      <FlatList
+        data={Users}
+        renderItem={({ item }) => <UserItem user={item} />}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   );
-};
+}
 
-export default UsersScreen;
+const styles = StyleSheet.create({
+  page: {
+    backgroundColor: "white",
+    flex: 1,
+  },
+});
