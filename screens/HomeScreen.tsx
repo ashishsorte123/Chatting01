@@ -3,6 +3,7 @@ import React from "react";
 import {
   FlatList,
   Image,
+  LogBox,
   Pressable,
   StyleSheet,
   Text,
@@ -12,6 +13,7 @@ import chatRoomsData from "../assets/dummy-data/ChatRooms";
 import ChatRoomItem from "../components/ChatRoomItem";
 
 export default function TabOneScreen() {
+  LogBox.ignoreAllLogs();
   const logOut = () => {
     Auth.signOut();
   };
